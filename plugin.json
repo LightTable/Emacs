@@ -1,7 +1,7 @@
 {
   "name": "Emacs",
   "author": "Kodowa",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "source": "https://github.com/LightTable/Emacs",
   "desc": "Emacs keybindings for Light Table",
   "dependencies": {
