@@ -79,4 +79,5 @@
                          "alt-g g" [:goto-line]
                          "ctrl-q tab" [(:emacs.keymap-cmd "Tab" "emacs-Ctrl-Q")]
                          "alt-x" [:show-commandbar-transient]
+                         "ctrl-x ctrl-e" [:eval-editor-form]
                          }}}
