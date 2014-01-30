@@ -78,4 +78,5 @@
                          "ctrl-x delete" [(:emacs.keymap-cmd "Delete" "emacs-Ctrl-X")]
                          "alt-g g" [:goto-line]
                          "ctrl-q tab" [(:emacs.keymap-cmd "Tab" "emacs-Ctrl-Q")]
+                         "alt-x" [:show-commandbar-transient]
                          }}}
