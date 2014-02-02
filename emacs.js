@@ -7,16 +7,38 @@
   // Kill 'ring'
 
   var killRing = [];
-  function addToRing(str) {
+  function copyLastInRing() {
+    lt.objs.editor.clipboard.set(killRing[killRing.length - 1]);
+  }
+  function justPushToRing(str) {
     killRing.push(str);
     if (killRing.length > 50) killRing.shift();
+  }
+  function keepExternalCopy() {
+    var lastInRing = killRing[killRing.length - 1];
+    var lastExternal = lt.objs.editor.clipboard.get();
+    if(lastExternal !== lastInRing) justPushToRing(lastExternal);
+  }
+  function addToRing(str) {
+    keepExternalCopy();
+    justPushToRing(str);
+    copyLastInRing();
   }
   function growRingTop(str) {
     if (!killRing.length) return addToRing(str);
     killRing[killRing.length - 1] += str;
+    copyLastInRing();
   }
-  function getFromRing(n) { return killRing[killRing.length - (n ? Math.min(n, 1) : 1)] || ""; }
-  function popFromRing() { if (killRing.length > 1) killRing.pop(); return getFromRing(); }
+  function getFromRing(n) {
+    keepExternalCopy();
+    return killRing[killRing.length - (n ? Math.min(n, 1) : 1)] || "";
+  }
+  function popFromRing() {
+    keepExternalCopy();
+    if (killRing.length > 1) killRing.pop();
+    copyLastInRing();
+    return getFromRing();
+  }
 
   var lastKill = null;
 
