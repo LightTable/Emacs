@@ -89,4 +89,5 @@
                          "alt-g alt-g" [:goto-line]
                          "ctrl-s" [:find.fill-selection :find.show]
                          "ctrl-q tab" [(:emacs.keymap-cmd "Tab" "emacs-Ctrl-Q")]
+                         "ctrl-x h" [:editor.select-all]
                          }}}
