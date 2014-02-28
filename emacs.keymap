@@ -11,7 +11,8 @@
            "ctrl-x ctrl-w" [:save]
            "ctrl-x s" [:save-all]
            "ctrl-x f" [:open-file]
-           "ctrl-x k" [:tabs.close]}
+           "ctrl-x k" [:tabs.close]
+           "ctrl-x ctrl-c" [:quit]}
      :find-bar {"ctrl-s" [:find.next]
                 "ctrl-r" [:find.prev]
                 "ctrl-g" [:find.clear :find.hide]
