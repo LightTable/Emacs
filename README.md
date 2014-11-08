@@ -12,4 +12,4 @@ Add the following to your `user.behaviors` (Ctrl-Space -> Settings: User behavio
 
 Copyright (C) 2013 Kodowa Inc.
 
-Distributed under the GPLv3, see license.md for the full text.
+Distributed under the MIT license, see license.md for the full text.
