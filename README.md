@@ -6,7 +6,7 @@ A thin wrapper around CodeMirror's Emacs mode that integrates it into Light Tabl
 
 Add the following to your `user.behaviors` (Ctrl-Space -> Settings: User behaviors) in the `:editor` section
 
-    (:lt.plugins.emacs/activate-emacs)
+    [:lt.plugins.emacs/activate-emacs]
 
 ### License
 
