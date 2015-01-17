@@ -5,7 +5,7 @@
                                   "ctrl-n" [(:filter-list.input.move-selection 1)]
                                   "ctrl-p" [(:filter-list.input.move-selection -1)]}
      :app {"alt-x" [:show-commandbar-transient]
-           "ctrl-x o" [:tabs.next]
+           "ctrl-x o" [:tabset.next]
            "ctrl-x ctrl-f" [:navigate-workspace-transient]
            "ctrl-x ctrl-s" [:save]
            "ctrl-x ctrl-w" [:save]
@@ -18,7 +18,10 @@
                 "ctrl-g" [:find.clear :find.hide]
                 "ctrl-n" [:find.clear :find.hide (:emacs.keymap-cmd "Ctrl-N")]
                 "ctrl-p" [:find.clear :find.hide (:emacs.keymap-cmd "Ctrl-P")]}
-     :editor.keys.normal {"ctrl-f" [(:emacs.keymap-cmd "Ctrl-F")]}
+     :editor.keys.normal {"ctrl-f" [(:emacs.keymap-cmd "Ctrl-F")]
+                          "ctrl-g" [:editor.selection.clear
+                                    :auto-complete.remove
+                                    (:emacs.keymap-cmd "Ctrl-G")]}
      :editor.keys.emacs {"ctrl-w" [(:emacs.keymap-cmd "Ctrl-W")]
                          "ctrl-k" [(:emacs.keymap-cmd "Ctrl-K")]
                          "alt-w" [(:emacs.keymap-cmd "Alt-W")]
@@ -37,6 +40,7 @@
                          "alt-b" [(:emacs.keymap-cmd "Alt-B")]
                          "alt-d" [(:emacs.keymap-cmd "Alt-D")]
                          "alt-backspace" [(:emacs.keymap-cmd "Alt-Backspace")]
+                         "ctrl-backspace" [(:emacs.keymap-cmd "Alt-Backspace")]
                          "ctrl-n" [(:emacs.keymap-cmd "Ctrl-N")]
                          "ctrl-p" [(:emacs.keymap-cmd "Ctrl-P")]
                          "down" [(:emacs.keymap-cmd "Down")]
@@ -75,7 +79,6 @@
                          "alt-shift-," [(:emacs.keymap-cmd "Shift-Alt-,")]
                          "alt-shift-." [(:emacs.keymap-cmd "Shift-Alt-.")]
                          "ctrl-r" [(:find.show true)]
-                         "ctrl-g" [(:emacs.keymap-cmd "Ctrl-G")]
                          "alt-shift-5" [:find.replace]
                          "alt-/" [:auto-complete.force]
                          "ctrl-j" [(:emacs.keymap-cmd "Ctrl-J")]
