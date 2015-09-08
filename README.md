@@ -2,11 +2,16 @@
 
 A thin wrapper around CodeMirror's Emacs mode that integrates it into Light Table.
 
-## Setup
+For additional Emacs-like functionality, see [the guide for Emacs
+Users](https://github.com/LightTable/LightTable/wiki/For-Emacs-Users).
 
-Add the following to your `user.behaviors` (Ctrl-Space -> Settings: User behaviors) in the `:editor` section
+## For Committers
 
-    [:lt.plugins.emacs/activate-emacs]
+Upgrade `emacs.js` with the following where `$VERSION` is a version number tag:
+
+    curl https://raw.githubusercontent.com/codemirror/CodeMirror/$VERSION/keymap/emacs.js > emacs.js
+
+`emacs.js` is currently on CodeMirror version 4.5.0.
 
 ### License
 
