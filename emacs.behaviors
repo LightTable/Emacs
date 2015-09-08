@@ -1,3 +1,5 @@
-{:+ {:app [(:lt.objs.plugins/load-js ["emacs.js" "emacs_compiled.js"])
-           (:lt.objs.plugins/load-keymap "emacs.keymap")]
-     :editor.keys.emacs [(:lt.objs.keyboard/chord-timeout false)]}}
+[
+ [:app :lt.objs.plugins/load-js ["emacs.js" "emacs_compiled.js"]]
+ [:app :lt.objs.plugins/load-keymap "emacs.keymap"]
+ [:editor.keys.emacs :lt.objs.keyboard/chord-timeout false]
+]
