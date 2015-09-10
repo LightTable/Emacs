@@ -5,6 +5,11 @@ A thin wrapper around CodeMirror's Emacs mode that integrates it into Light Tabl
 For additional Emacs-like functionality, see [the guide for Emacs
 Users](https://github.com/LightTable/LightTable/wiki/For-Emacs-Users).
 
+## Setup
+
+Install the `Emacs` plugin using the Plugin Manager and then run the command `App: Reload behaviors`.
+Emacs keybindings only take effect on new files. Existing files will need to be reopened.
+
 ## For Committers
 
 Upgrade `emacs.js` with the following where `$VERSION` is a version number tag:
