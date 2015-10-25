@@ -7,7 +7,7 @@ Users](https://github.com/LightTable/LightTable/wiki/For-Emacs-Users).
 
 ## Setup
 
-Install the `Emacs` plugin using the Plugin Manager and then run the command `App: Reload behaviors`.
+Install the `Emacs` plugin using the Plugin Manager.
 Emacs keybindings only take effect on new files. Existing files will need to be reopened.
 
 ## For Committers
